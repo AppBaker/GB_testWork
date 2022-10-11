@@ -16,7 +16,7 @@ string ReadData(string line)
 
 string[] GetArrayFromString(string line)
 {
-    string[] stringArray = line.Split(" ");
+    string[] stringArray = line.Split(",");
     return stringArray;
 }
 
@@ -42,13 +42,8 @@ void Print1DArr(string[] arr)
     Console.Write("[{0}]", string.Join(", ", arr));
 }
 
-// Вывод результата
-void PrintResult(string line)
-{
-    Console.WriteLine(line);
-}
 // Исполнение программы
-string[] stringsArray = GetArrayFromString(ReadData("Введите массив строк разделенных пробелами"));
+string[] stringsArray = GetArrayFromString(ReadData("Введите массив строк разделенных запятыми:"));
 Console.WriteLine();
 Print1DArr(stringsArray);
 Console.Write(" -> ");
